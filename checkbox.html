@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Hide the default checkbox */
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        /* Custom checkbox style */
+        .custom-checkbox {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #f3f3f3;
+            border: 2px solid #ccc;
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        /* Checkbox checked state */
+        input[type="checkbox"]:checked + .custom-checkbox {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+        /* Add a checkmark when checked */
+        .custom-checkbox:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 5px;
+            top: 2px;
+            width: 6px;
+            height: 12px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        /* Show checkmark when checked */
+        input[type="checkbox"]:checked + .custom-checkbox:after {
+            display: block;
+        }
+
+        /* Label styles */
+        .checkbox-label {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+    <title>Custom Checkbox</title>
+</head>
+<body>
+
+    <label>
+        <input type="checkbox" id="customCheck">
+        <span class="custom-checkbox"></span>
+        <span class="checkbox-label">I agree to the terms and conditions</span>
+    </label>
+
+</body>
+</html>

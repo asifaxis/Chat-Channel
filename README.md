@@ -1,3 +1,4 @@
 # Chat-Channel
 It is a chat front end code.<br />
-Author: Asif
+Author: Asif<br />
+Job: Dev
